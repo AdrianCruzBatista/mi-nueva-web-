@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación de la Tienda Samsung</title>
+    <link rel="stylesheet" href="C:\Users\Usuario\OneDrive\Escritorio\Mi nueva web\CSS\Ubícación de samsung.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="C:\Users\Usuario\OneDrive\Escritorio\Mi nueva web\IMAGENES\samsung.png" alt="Samsung Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Historia de samsung.html">Historia</a></li>
+                <li><a href="Productos de samsung.html">Productos</a></li>
+                <li><a href="Formulario.html">Formulario</a></li>
+                <li><a href="Preguntas frecuentes.html">Preguntas frecuentes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="location">
+            <h1>Ubicación de la Tienda Samsung</h1>
+            <div id="map"></div>
+            <p>Visítanos en nuestra tienda Samsung en Santo Domingo, República Dominicana.</p>
+            <address>
+                Av. Abraham Lincoln No. 1001, Santo Domingo, República Dominicana
+            </address>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Samsung Electronics. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function initMap() {
+            var location = { lat: 18.4811, lng: -69.9364 }; // Coordenadas de la tienda Samsung en Santo Domingo
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+</body>
+</html>
